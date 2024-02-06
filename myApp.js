@@ -5,10 +5,7 @@ const app = express();
 
 app.use(helmet.hidePoweredBy());
 
-app.use(helmet({                                                            
-  frameguard: {         // configure
-    action: 'DENY'
-  }}))
+app.use (helmet.frameguard({ action: “deny” }));
 
 
 
